@@ -1,5 +1,5 @@
 # HealthEndpoint
-Library for adding Health Checking HTTP Endpoint for services/components.
+Library for adding health checking endpoint to web service or application
 
 [![Build status](https://ci.appveyor.com/api/projects/status/6q7xxdogi4ltqr8o?svg=true)](https://ci.appveyor.com/project/arkoc/healthendpoint)
 
