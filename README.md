@@ -71,3 +71,7 @@ Also we are adding CPU, DiskSpace and MemoryUsage Indicators. And when we reques
   ]
 }
 ```
+
+## Note ##
+
+The package is in active development. If you have any questions, suggestions or something related to this feel free to add Issue or contact me.
