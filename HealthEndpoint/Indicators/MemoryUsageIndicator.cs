@@ -9,7 +9,7 @@ namespace HealthEndpoint.Indicators
     {
         public double TotalMemoryInMB { get; set; }
         public double AvailableMemoryInMB { get; set; }
-        public double MemoryUsageInPercentage { get; set; }
+        public double UsagePercentage { get; set; }
     }
 
     internal class MemoryUsageIndicator : IHealthIndicator
@@ -25,7 +25,7 @@ namespace HealthEndpoint.Indicators
             double totalMemory = GetTotalMemmoryInMB();
             double availableMemory = availableRAMCounter.NextValue();
 
-            double memUsageInPercentage = ((totalMemory - availableMemory) / totalMemory) * 100;
+            double memUsageInPercentage = totalMemory != 0 ? ((totalMemory - availableMemory) / totalMemory) * 100 : 0;
 
             return new HealthIndicatorResult(_indicatorName)
             {
@@ -33,7 +33,7 @@ namespace HealthEndpoint.Indicators
                 {
                     TotalMemoryInMB = totalMemory,
                     AvailableMemoryInMB = availableMemory,
-                    MemoryUsageInPercentage = memUsageInPercentage
+                    UsagePercentage = memUsageInPercentage
                 }
             };
         }

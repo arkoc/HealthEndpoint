@@ -7,13 +7,13 @@ namespace HealthEndpoint.Indicators
 {
     internal class DiskSpaceUsageIndicatorResult
     {
-        public double TotalDiskSpaceInGB { get; set; }
-        public double DiskSpaceUsageInGB { get; set; }
-        public double UsageInPercentage { get; set; }
+        public decimal TotalDiskSpaceInGB { get; set; }
+        public decimal DiskSpaceUsageInGB { get; set; }
+        public decimal UsagePercentage { get; set; }
     }
     internal class DiskSpaceUsageIndicator : IHealthIndicator
     {
-        private string _indicatorName = "Disk Space Usage";
+        private string _indicatorName = "DiskSpace Usage";
         public HealthIndicatorResult Check()
         {
             DriveInfo[] oDrvs = DriveInfo.GetDrives();
@@ -27,15 +27,15 @@ namespace HealthEndpoint.Indicators
                 diskSpaceUsageInGB += drive.AvailableFreeSpace / 1024 / 1024 / 1024; // in GB
             }
 
-            double usageInPresentage = (diskSpaceUsageInGB / totalDiskSpaceInGB) * 100;
+            double usageInPresentage = totalDiskSpaceInGB != 0 ? (diskSpaceUsageInGB / totalDiskSpaceInGB) * 100 : 0;
 
             return new HealthIndicatorResult(_indicatorName)
             {
                 Result = new DiskSpaceUsageIndicatorResult
                 {
-                    TotalDiskSpaceInGB = totalDiskSpaceInGB,
-                    DiskSpaceUsageInGB = diskSpaceUsageInGB,
-                    UsageInPercentage = usageInPresentage
+                    TotalDiskSpaceInGB = (decimal)totalDiskSpaceInGB,
+                    DiskSpaceUsageInGB = (decimal)diskSpaceUsageInGB,
+                    UsagePercentage = (decimal)usageInPresentage
                 }
             };
         }

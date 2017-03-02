@@ -6,7 +6,7 @@ namespace HealthEndpoint.Indicators
 {
     internal class CpuUsageResult
     {
-        public float TotalUsageInPercentage { get; set; }
+        public float UsagePercentage { get; set; }
     }
 
     internal class CpuUsageIndicator : IHealthIndicator
@@ -24,7 +24,7 @@ namespace HealthEndpoint.Indicators
 
             return new HealthIndicatorResult(_indicatorName)
             {
-                Result = new CpuUsageResult() { TotalUsageInPercentage = usage }
+                Result = new CpuUsageResult() { UsagePercentage = usage }
             };
 
         }
