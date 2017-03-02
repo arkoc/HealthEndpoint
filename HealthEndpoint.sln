@@ -9,6 +9,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthEndpoint.Host", "HealthEndpoint.Host\HealthEndpoint.Host.csproj", "{17D1468A-7672-4133-8B17-235CC0F899AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthEndpoint.Tests", "HealthEndpoint.Tests\HealthEndpoint.Tests.csproj", "{417E2405-9987-457D-8BCE-B37DD46D7E2F}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Shared\Shared.projitems*{33280060-256c-4afc-b10a-41ac51b1ca26}*SharedItemsImports = 13
@@ -27,6 +29,10 @@ Global
 		{17D1468A-7672-4133-8B17-235CC0F899AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17D1468A-7672-4133-8B17-235CC0F899AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17D1468A-7672-4133-8B17-235CC0F899AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{417E2405-9987-457D-8BCE-B37DD46D7E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{417E2405-9987-457D-8BCE-B37DD46D7E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{417E2405-9987-457D-8BCE-B37DD46D7E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{417E2405-9987-457D-8BCE-B37DD46D7E2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
