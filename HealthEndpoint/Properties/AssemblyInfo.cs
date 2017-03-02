@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("HealthEndpoint")]
-[assembly: AssemblyDescription("Library for adding health checking endpoint.")]
+[assembly: AssemblyDescription("Library for adding health checking endpoint to web service or application.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Aram Kocharyan")]
 [assembly: AssemblyProduct("HealthEndpoint")]

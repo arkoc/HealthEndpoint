@@ -7,15 +7,14 @@ namespace HealthEndpoint.Results
     {
         public HealthIndicatorResult()
         {
-
         }
 
         public HealthIndicatorResult(string name)
         {
-            IndicatorName = name;
+            Name = name;
         }
 
-        public string IndicatorName { get; set; }
+        public string Name { get; set; }
         public IEnumerable<string> Errors { get; set; } = new List<string>();
         public object Result { get; set; }
     }

@@ -27,7 +27,7 @@ namespace HealthEndpoint.Endpoints
                 var indicatorResult = indicator.Check();
                 if (indicatorResult != null)
                 {
-                    healthCheckResult.IndicatorResults.Add(indicatorResult);
+                    healthCheckResult.Indicators.Add(indicatorResult);
                 }
             }
 
